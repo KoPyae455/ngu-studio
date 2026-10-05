@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bean Boutique special offers and coffee subscriptions — seasonal deals plus Basic Brew, Coffee Lover and Bean Master plans.">
+  <meta name="theme-color" content="#241812">
+  <title>Offers &amp; Subscriptions | Bean Boutique Coffee Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-offers">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34" focusable="false">
+            <circle cx="20" cy="20" r="19" fill="#c08552"></circle>
+            <ellipse cx="20" cy="20" rx="9" ry="14" fill="#f8f1e7" transform="rotate(-35 20 20)"></ellipse>
+            <path d="M13 27 C18 21, 22 19, 27 13" stroke="#5c3d2e" stroke-width="2.4" fill="none" stroke-linecap="round"></path>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Bean Boutique</span>
+          <span class="brand-tag">Coffee Shop</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee.html">Coffee</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="offers.html" aria-current="page">Offers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li>
+            <a class="nav-cart" href="cart.html">
+              Cart <span class="cart-count" data-cart-count>0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ======================= PAGE HEADER ======================= -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <ol class="breadcrumb" aria-label="Breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li>Offers &amp; subscriptions</li>
+        </ol>
+        <span class="section-eyebrow">Save more, taste more</span>
+        <h1 id="page-title">Special Offers &amp; Subscriptions</h1>
+        <p>Seasonal promotions today, and fresh beans delivered to your door every month — pause, skip or cancel whenever you like.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SPECIAL OFFERS ===================== -->
+    <section class="section" aria-labelledby="offers-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">This season</span>
+          <h2 id="offers-heading">Current special offers</h2>
+          <p>Three ways to save at Bean Boutique — mention the code online or in the shop.</p>
+        </header>
+
+        <div class="promo-grid">
+
+          <article class="promo-card">
+            <span class="promo-code">WELCOME15</span>
+            <h3>15% off your first order</h3>
+            <p>New here? Use the code above on your first bag of beans or any piece of equipment.</p>
+            <a class="btn btn-light" href="coffee.html">Shop coffee</a>
+          </article>
+
+          <article class="promo-card">
+            <span class="promo-code">BREWBundle</span>
+            <h3>Starter kit bundle — £49</h3>
+            <p>French press plus two 250&nbsp;g bags of your choice. Save £10 compared with buying separately.</p>
+            <a class="btn btn-light" href="equipment.html">View equipment</a>
+          </article>
+
+          <article class="promo-card">
+            <span class="promo-code">FREEPOST</span>
+            <h3>Free UK delivery over £40</h3>
+            <p>Stock up for the month and we will cover the postage — automatically applied at checkout.</p>
+            <a class="btn btn-light" href="cart.html">Check your basket</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SUBSCRIPTION PLANS ==================== -->
+    <section class="section section--alt" aria-labelledby="plans-heading">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <span class="section-eyebrow">Coffee subscriptions</span>
+          <h2 id="plans-heading">Choose your monthly plan</h2>
+          <p>Every plan is roasted to order, shipped within 24 hours of roasting and fully flexible — skip, pause or cancel in one click.</p>
+        </header>
+
+        <div class="pricing-grid">
+
+          <article class="pricing-card">
+            <h3>Basic Brew</h3>
+            <p class="pricing-subtitle">A simple start for occasional drinkers.</p>
+            <p class="pricing-price">£11 <span>per month</span></p>
+            <ul class="pricing-features">
+              <li>Monthly coffee delivery</li>
+              <li>1 &times; 250&nbsp;g bag each month</li>
+              <li>Discounted price for subscribers</li>
+              <li>Pause or cancel any time</li>
+            </ul>
+            <button type="button" class="btn btn-outline btn-block" data-subscribe
+              data-id="sub-basic" data-plan-name="Basic Brew" data-price="11"
+              data-image="images/offers/offers-banner.jpg">Start Basic Brew</button>
+            <p class="plan-status" data-plan-status role="status"></p>
+          </article>
+
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-badge">Most popular</span>
+            <h3>Coffee Lover</h3>
+            <p class="pricing-subtitle">Two bags a month, delivery on us.</p>
+            <p class="pricing-price">£19 <span>per month</span></p>
+            <ul class="pricing-features">
+              <li>Monthly coffee delivery</li>
+              <li>2 &times; 250&nbsp;g bags each month</li>
+              <li>Free delivery on every order</li>
+              <li>Printed tasting notes card</li>
+              <li>10% off all workshops</li>
+            </ul>
+            <button type="button" class="btn btn-primary btn-block" data-subscribe
+              data-id="sub-lover" data-plan-name="Coffee Lover" data-price="19"
+              data-image="images/offers/offers-banner.jpg">Start Coffee Lover</button>
+            <p class="plan-status" data-plan-status role="status"></p>
+          </article>
+
+          <article class="pricing-card">
+            <h3>Bean Master</h3>
+            <p class="pricing-subtitle">Premium selections and exclusive access.</p>
+            <p class="pricing-price">£29 <span>per month</span></p>
+            <ul class="pricing-features">
+              <li>Premium &amp; micro-lot selections</li>
+              <li>3 &times; 250&nbsp;g bags each month</li>
+              <li>Exclusive tasting events access</li>
+              <li>Free delivery on every order</li>
+              <li>15% off brewing equipment</li>
+            </ul>
+            <button type="button" class="btn btn-outline btn-block" data-subscribe
+              data-id="sub-master" data-plan-name="Bean Master" data-price="29"
+              data-image="images/offers/offers-banner.jpg">Start Bean Master</button>
+            <p class="plan-status" data-plan-status role="status"></p>
+          </article>
+
+        </div>
+
+        <p class="text-center muted">All prices include VAT. Subscriptions added to your cart are billed monthly in this prototype — no real payment is taken.</p>
+      </div>
+    </section>
+
+    <!-- ==================== SUBSCRIPTION PROMO ==================== -->
+    <section class="section" aria-labelledby="why-sub-title">
+      <div class="container">
+        <div class="offers-banner">
+          <div>
+            <span class="section-eyebrow">Why subscribe?</span>
+            <h2 id="why-sub-title">Freshness you can taste</h2>
+            <p class="muted">Beans are at their best between 7 and 28 days after roasting. A subscription means your coffee arrives right in that window — never stale, never boring.</p>
+            <ul class="pricing-features">
+              <li>Roasted the day your box ships</li>
+              <li>Swap blends or origins every month</li>
+              <li>One email a month, no spam</li>
+            </ul>
+            <a class="btn btn-primary" href="coffee.html">Preview this month's roasts</a>
+          </div>
+          <img src="images/offers/offers-banner.jpg" alt="Latte with heart-shaped latte art seen from above" width="900" height="600" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <p class="brand-name">Bean Boutique</p>
+        <p>A small independent coffee shop and micro-roastery serving specialty beans, brewing kit and friendly workshops.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee.html">Coffee selection</a></li>
+          <li><a href="equipment.html">Brewing equipment</a></li>
+          <li><a href="offers.html">Offers &amp; subscriptions</a></li>
+          <li><a href="events.html">Events &amp; workshops</a></li>
+          <li><a href="cart.html">Shopping cart</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Visit us</h2>
+        <address>
+          12 Abbey Churchyard<br>
+          Bath, BA1 1LJ<br>
+          Mon–Sat: 7:30–18:00<br>
+          Sunday: 9:00–16:00
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Get 15% off</h2>
+        <p>Join the Bean Letter for early access to new roasts and workshops.</p>
+        <form class="newsletter-form js-newsletter" novalidate>
+          <label for="footer-email">Email address</label>
+          <div class="newsletter-row">
+            <input type="email" id="footer-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="footer-email-message">
+            <button class="btn btn-primary btn-small" type="submit">Sign up</button>
+          </div>
+          <p class="form-message" id="footer-email-message" role="status"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          <span>&copy; <span data-current-year>2026</span> Bean Boutique Coffee Shop — educational front-end prototype.</span>
+          <span>Photography: Wikimedia Commons contributors (CC / public domain) — see README for credits.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Site script (all custom JavaScript lives here) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+

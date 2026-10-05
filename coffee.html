@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the Bean Boutique coffee selection — unique small-batch blends with tasting notes, brew methods and prices.">
+  <meta name="theme-color" content="#241812">
+  <title>Coffee Selection | Bean Boutique Coffee Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Plugin 2: AOS (Animate On Scroll) — animated product cards on this page -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+</head>
+<body class="page-coffee">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34" focusable="false">
+            <circle cx="20" cy="20" r="19" fill="#c08552"></circle>
+            <ellipse cx="20" cy="20" rx="9" ry="14" fill="#f8f1e7" transform="rotate(-35 20 20)"></ellipse>
+            <path d="M13 27 C18 21, 22 19, 27 13" stroke="#5c3d2e" stroke-width="2.4" fill="none" stroke-linecap="round"></path>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Bean Boutique</span>
+          <span class="brand-tag">Coffee Shop</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee.html" aria-current="page">Coffee</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li>
+            <a class="nav-cart" href="cart.html">
+              Cart <span class="cart-count" data-cart-count>0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ======================= PAGE HEADER ======================= -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <ol class="breadcrumb" aria-label="Breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li>Coffee selection</li>
+        </ol>
+        <span class="section-eyebrow">Small-batch roasts</span>
+        <h1 id="page-title">Coffee Selection</h1>
+        <p>Eight unique blends and single origins, each roasted in small batches. Search the catalogue by name, tasting note or brew method.</p>
+      </div>
+    </section>
+
+    <!-- ==================== CATALOGUE TOOLS ==================== -->
+    <!-- Search + category filters powered by Fuse.js (Plugin 4) -->
+    <section class="section section--tight" aria-labelledby="catalogue-heading">
+      <div class="container">
+        <h2 id="catalogue-heading" class="visually-hidden">Search and filter the coffee catalogue</h2>
+
+        <div class="catalogue-tools">
+          <div class="search-bar">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+              <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle>
+              <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            <label class="visually-hidden" for="catalogue-search">Search coffees</label>
+            <input type="search" id="catalogue-search" placeholder="Try: coffee, espresso, arabica, french press&hellip;" autocomplete="off">
+            <button type="button" class="search-clear" id="search-clear">Clear</button>
+          </div>
+
+          <ul class="filter-chips" aria-label="Filter coffees by category">
+            <li><button type="button" class="chip" data-filter="all" aria-pressed="true">All coffees</button></li>
+            <li><button type="button" class="chip" data-filter="espresso" aria-pressed="false">Espresso roasts</button></li>
+            <li><button type="button" class="chip" data-filter="filter" aria-pressed="false">Filter roasts</button></li>
+            <li><button type="button" class="chip" data-filter="single-origin" aria-pressed="false">Single origins</button></li>
+            <li><button type="button" class="chip" data-filter="decaf" aria-pressed="false">Decaf</button></li>
+          </ul>
+
+          <p class="search-status" id="search-status" role="status">Showing 8 of 8 coffees.</p>
+        </div>
+
+        <!-- ============== PRODUCT CATALOGUE (8 coffees) ============== -->
+        <!-- Plugin 2: AOS animates each product card as it scrolls into view -->
+        <div class="product-grid" id="product-grid">
+
+          <article class="product-card" data-product-card data-id="coffee-01" data-category="espresso"
+            data-name="Midnight Ember Espresso"
+            data-search="espresso dark roast coffee dark chocolate toasted hazelnut molasses moka pot stovetop strong"
+            data-aos="fade-up">
+            <div class="product-media">
+              <img src="images/coffee/espresso-pour.jpg" alt="Two espresso shots pouring from a retro espresso machine" width="900" height="600" loading="lazy">
+              <span class="product-badge">Signature</span>
+            </div>
+            <div class="product-body">
+              <h3>Midnight Ember Espresso</h3>
+              <p class="product-desc">Our darkest, most indulgent roast — thick crema and a long bittersweet finish.</p>
+              <dl class="product-meta">
+                <div><dt>Tasting notes:</dt><dd>Dark chocolate, hazelnut, molasses</dd></div>
+                <div><dt>Best brewed as:</dt><dd>Espresso, Moka pot</dd></div>
+                <div><dt>Roast level:</dt><dd>Dark</dd></div>
+              </dl>
+              <div class="product-footer">
+                <span class="product-price">£12.50</span>
+                <button type="button" class="btn btn-primary btn-small" data-add-to-cart
+                  data-id="coffee-01" data-name="Midnight Ember Espresso (250g)"
+                  data-price="12.50" data-image="images/coffee/espresso-pour.jpg">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-card data-id="coffee-02" data-category="espresso"
+            data-name="Golden Hour Blend"
+            data-search="espresso medium roast caramel milk chocolate orange peel french press espresso milk drinks flat white"
+            data-aos="fade-up" data-aos-delay="80">
+            <div class="product-media">
+              <img src="images/hero/hero-latte.jpg" alt="Latte with leaf-pattern latte art in a white cup" width="900" height="600" loading="lazy">
+              <span class="product-badge">Bestseller</span>
+            </div>
+            <div class="product-body">
+              <h3>Golden Hour Blend</h3>
+              <p class="product-desc">A sweet, rounded blend that shines straight black or milky — our café house coffee.</p>
+              <dl class="product-meta">
+                <div><dt>Tasting notes:</dt><dd>Caramel, milk chocolate, orange peel</dd></div>
+                <div><dt>Best brewed as:</dt><dd>Espresso, French press</dd></div>
+                <div><dt>Roast level:</dt><dd>Medium</dd></div>
+              </dl>
+              <div class="product-footer">
+                <span class="product-price">£11.95</span>
+                <button type="button" class="btn btn-primary btn-small" data-add-to-cart
+                  data-id="coffee-02" data-name="Golden Hour Blend (250g)"
+                  data-price="11.95" data-image="images/hero/hero-latte.jpg">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-card data-id="coffee-03" data-category="single-origin"
+            data-name="Ethiopia Guji Single Origin"
+            data-search="arabica single origin ethiopia guji light roast peach jasmine bergamot pour over filter tea like"
+            data-aos="fade-up" data-aos-delay="160">
+            <div class="product-media">
+              <img src="images/coffee/beans-arabica.jpg" alt="Close-up of glossy roasted Arabica coffee beans" width="900" height="600" loading="lazy">
+              <span class="product-badge">New</span>
+            </div>
+            <div class="product-body">
+              <h3>Ethiopia Guji Single Origin</h3>
+              <p class="product-desc">Washed Guji lots with a bright, floral personality — a filter-lover's dream.</p>
+              <dl class="product-meta">
+                <div><dt>Tasting notes:</dt><dd>Peach, jasmine, bergamot</dd></div>
+                <div><dt>Best brewed as:</dt><dd>Pour-over, AeroPress</dd></div>
+                <div><dt>Roast level:</dt><dd>Light</dd></div>
+              </dl>
+              <div class="product-footer">
+                <span class="product-price">£14.50</span>
+                <button type="button" class="btn btn-primary btn-small" data-add-to-cart
+                  data-id="coffee-03" data-name="Ethiopia Guji Single Origin (250g)"
+                  data-price="14.50" data-image="images/coffee/beans-arabica.jpg">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-card data-id="coffee-04" data-category="single-origin"
+            data-name="Sierra Vista Colombia"
+            data-search="single origin colombia arabica medium roast red apple cocoa brown sugar filter french press balanced"
+            data-aos="fade-up" data-aos-delay="240">
+            <div class="product-media">
+              <img src="images/coffee/beans-plate.jpg" alt="Roasted coffee beans arranged on a flat surface" width="900" height="600" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3>Sierra Vista Colombia</h3>
+              <p class="product-desc">Comforting and balanced — the safe bet that never tastes boring.</p>
+              <dl class="product-meta">
+                <div><dt>Tasting notes:</dt><dd>Red apple, cocoa, brown sugar</dd></div>
+                <div><dt>Best brewed as:</dt><dd>Filter, French press</dd></div>
+                <div><dt>Roast level:</dt><dd>Medium</dd></div>
+              </dl>
+              <div class="product-footer">
+                <span class="product-price">£13.50</span>
+                <button type="button" class="btn btn-primary btn-small" data-add-to-cart
+                  data-id="coffee-04" data-name="Sierra Vista Colombia (250g)"
+                  data-price="13.50" data-image="images/coffee/beans-plate.jpg">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-card data-id="coffee-05" data-category="espresso"
+            data-name="Cocoa and Hazel Dark Roast"
+            data-search="dark roast espresso coffee cocoa hazelnut brownie rich french press moka pot"
+            data-aos="fade-up">
+            <div class="product-media">
+              <img src="images/coffee/beans-texture.jpg" alt="Textured close-up of dark roasted coffee beans" width="900" height="600" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3>Cocoa &amp; Hazel Dark Roast</h3>
+              <p class="product-desc">Dessert in a cup — thick body, low acidity and a chocolatey, roasty sweetness.</p>
+              <dl class="product-meta">
+                <div><dt>Tasting notes:</dt><dd>Cocoa nib, roasted hazelnut, brownie</dd></div>
+                <div><dt>Best brewed as:</dt><dd>Espresso, French press</dd></div>
+                <div><dt>Roast level:</dt><dd>Dark</dd></div>
+              </dl>
+              <div class="product-footer">
+                <span class="product-price">£12.95</span>
+                <button type="button" class="btn btn-primary btn-small" data-add-to-cart
+                  data-id="coffee-05" data-name="Cocoa and Hazel Dark Roast (250g)"
+                  data-price="12.95" data-image="images/coffee/beans-texture.jpg">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-card data-id="coffee-06" data-category="filter"
+            data-name="Morning Meadow Filter"
+            data-search="filter roast coffee honey nectarine almond v60 pour over batch brew clean sweet"
+            data-aos="fade-up" data-aos-delay="80">
+            <div class="product-media">
+              <img src="images/coffee/pour-over-cup.jpg" alt="Filter coffee dripping into a glass server" width="900" height="600" loading="lazy">
+              <span class="product-badge">Café favourite</span>
+            </div>
+            <div class="product-body">
+              <h3>Morning Meadow Filter</h3>
+              <p class="product-desc">Clean, sweet and juicy — designed for pour-over and batch brewers, delicious cold too.</p>
+              <dl class="product-meta">
+                <div><dt>Tasting notes:</dt><dd>Honey, nectarine, almond</dd></div>
+                <div><dt>Best brewed as:</dt><dd>Pour-over, Filter machine</dd></div>
+                <div><dt>Roast level:</dt><dd>Light–medium</dd></div>
+              </dl>
+              <div class="product-footer">
+                <span class="product-price">£11.50</span>
+                <button type="button" class="btn btn-primary btn-small" data-add-to-cart
+                  data-id="coffee-06" data-name="Morning Meadow Filter (250g)"
+                  data-price="11.50" data-image="images/coffee/pour-over-cup.jpg">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-card data-id="coffee-07" data-category="decaf"
+            data-name="Night Owl Decaf"
+            data-search="decaf swiss water process coffee vanilla cola cocoa smooth evening espresso filter"
+            data-aos="fade-up" data-aos-delay="160">
+            <div class="product-media">
+              <img src="images/coffee/beans-preroast.jpg" alt="Bowl of roasted coffee beans ready for grinding" width="900" height="600" loading="lazy">
+              <span class="product-badge">Decaf</span>
+            </div>
+            <div class="product-body">
+              <h3>Night Owl Decaf</h3>
+              <p class="product-desc">Swiss Water processed, so all the flavour stays and the caffeine goes — perfect after dinner.</p>
+              <dl class="product-meta">
+                <div><dt>Tasting notes:</dt><dd>Vanilla, cola, cocoa</dd></div>
+                <div><dt>Best brewed as:</dt><dd>Espresso, Filter</dd></div>
+                <div><dt>Roast level:</dt><dd>Medium</dd></div>
+              </dl>
+              <div class="product-footer">
+                <span class="product-price">£12.00</span>
+                <button type="button" class="btn btn-primary btn-small" data-add-to-cart
+                  data-id="coffee-07" data-name="Night Owl Decaf (250g)"
+                  data-price="12.00" data-image="images/coffee/beans-preroast.jpg">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-product-card data-id="coffee-08" data-category="filter"
+            data-name="Breakfast House Blend"
+            data-search="house blend filter coffee peanut toffee citrus easy drinking french press batch brew value"
+            data-aos="fade-up" data-aos-delay="240">
+            <div class="product-media">
+              <img src="images/coffee/beans-bowl.png" alt="Small white bowl filled with roasted coffee beans" width="900" height="600" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3>Breakfast House Blend</h3>
+              <p class="product-desc">Our everyday blend: friendly, forgiving and easy to drink all morning long.</p>
+              <dl class="product-meta">
+                <div><dt>Tasting notes:</dt><dd>Toffee, roasted peanut, citrus</dd></div>
+                <div><dt>Best brewed as:</dt><dd>Batch brew, French press</dd></div>
+                <div><dt>Roast level:</dt><dd>Medium</dd></div>
+              </dl>
+              <div class="product-footer">
+                <span class="product-price">£10.95</span>
+                <button type="button" class="btn btn-primary btn-small" data-add-to-cart
+                  data-id="coffee-08" data-name="Breakfast House Blend (250g)"
+                  data-price="10.95" data-image="images/coffee/beans-bowl.png">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Shown when a search returns no matching products -->
+        <div class="search-empty" id="search-empty" hidden>
+          <h3>No coffees match your search</h3>
+          <p>Try a different word — for example <em>espresso</em>, <em>arabica</em>, <em>french press</em> or <em>decaf</em>.</p>
+          <button type="button" class="btn btn-outline" id="search-empty-clear">Show all coffees</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BREW MATCH BANNER ==================== -->
+    <section class="section section--alt" aria-labelledby="match-title">
+      <div class="container">
+        <div class="offers-banner">
+          <div>
+            <span class="section-eyebrow">Not sure what to pick?</span>
+            <h2 id="match-title">Let our baristas match your brew method</h2>
+            <p class="muted">Tell us how you brew — espresso, French press, pour-over or filter machine — and we will suggest two roasts with a free tasting sample.</p>
+            <a class="btn btn-primary" href="events.html">Book a free tasting</a>
+          </div>
+          <img src="images/coffee/coffee-drink.jpg" alt="Cappuccino with latte art served on a saucer" width="900" height="600" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <p class="brand-name">Bean Boutique</p>
+        <p>A small independent coffee shop and micro-roastery serving specialty beans, brewing kit and friendly workshops.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee.html">Coffee selection</a></li>
+          <li><a href="equipment.html">Brewing equipment</a></li>
+          <li><a href="offers.html">Offers &amp; subscriptions</a></li>
+          <li><a href="events.html">Events &amp; workshops</a></li>
+          <li><a href="cart.html">Shopping cart</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Visit us</h2>
+        <address>
+          12 Abbey Churchyard<br>
+          Bath, BA1 1LJ<br>
+          Mon–Sat: 7:30–18:00<br>
+          Sunday: 9:00–16:00
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Get 15% off</h2>
+        <p>Join the Bean Letter for early access to new roasts and workshops.</p>
+        <form class="newsletter-form js-newsletter" novalidate>
+          <label for="footer-email">Email address</label>
+          <div class="newsletter-row">
+            <input type="email" id="footer-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="footer-email-message">
+            <button class="btn btn-primary btn-small" type="submit">Sign up</button>
+          </div>
+          <p class="form-message" id="footer-email-message" role="status"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          <span>&copy; <span data-current-year>2026</span> Bean Boutique Coffee Shop — educational front-end prototype.</span>
+          <span>Photography: Wikimedia Commons contributors (CC / public domain) — see README for credits.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Plugin 2: AOS (Animate On Scroll) — animates the product cards -->
+  <script src="plugins/aos/aos.js"></script>
+  <!-- Plugin 4: Fuse.js — fuzzy search for the catalogue search box -->
+  <script src="plugins/fuse/fuse.min.js"></script>
+  <!-- Site script (all custom JavaScript lives here) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

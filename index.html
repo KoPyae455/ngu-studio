@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bean Boutique Coffee Shop — small-batch specialty coffee, brewing equipment, workshops and monthly subscriptions in Bath.">
+  <meta name="theme-color" content="#241812">
+  <title>Bean Boutique Coffee Shop | Home</title>
+
+  <!-- Google Fonts (falls back to system fonts when offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <!-- Main external stylesheet (linked by every page) -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Plugin 1: Swiper.js — featured products/events slideshow on the home page -->
+  <link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css">
+</head>
+<body class="page-home">
+
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34" focusable="false">
+            <circle cx="20" cy="20" r="19" fill="#c08552"></circle>
+            <ellipse cx="20" cy="20" rx="9" ry="14" fill="#f8f1e7" transform="rotate(-35 20 20)"></ellipse>
+            <path d="M13 27 C18 21, 22 19, 27 13" stroke="#5c3d2e" stroke-width="2.4" fill="none" stroke-linecap="round"></path>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Bean Boutique</span>
+          <span class="brand-tag">Coffee Shop</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="coffee.html">Coffee</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li>
+            <a class="nav-cart" href="cart.html">
+              Cart <span class="cart-count" data-cart-count>0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <p class="hero-eyebrow">Specialty coffee roastery &amp; brew bar</p>
+        <h1 id="hero-title">Bean Boutique<br>Coffee Shop</h1>
+        <p class="hero-lead">Small-batch beans, hand-brewed rituals and a warm corner to call your own.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="coffee.html">Explore our coffee</a>
+          <a class="btn btn-outline-light" href="offers.html">View current offers</a>
+        </div>
+        <ul class="hero-badges">
+          <li>Roasted fresh weekly</li>
+          <li>Ethically sourced</li>
+          <li>Brew bar &amp; workshops</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================= VALUE PROPOSITIONS ======================= -->
+    <section class="section section--tight values" aria-labelledby="values-title">
+      <div class="container">
+        <h2 id="values-title" class="visually-hidden">Why choose Bean Boutique</h2>
+        <ul class="values-grid">
+          <li class="value-card">
+            <span class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" focusable="false"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0 0 12 0c0-4-3-6-6-10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Single-origin beans</h3>
+            <p>Traceable lots from small farms, roasted in small batches.</p>
+          </li>
+          <li class="value-card">
+            <span class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" focusable="false"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 5c0 1 1 1 1 2M11 5c0 1 1 1 1 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Brewed with care</h3>
+            <p>Every cup at the brew bar is weighed, timed and dialled in.</p>
+          </li>
+          <li class="value-card">
+            <span class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" focusable="false"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 10h16M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Workshops &amp; events</h3>
+            <p>Latte art, cupping nights and beginner brewing classes.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED SLIDESHOW ==================== -->
+    <!-- Plugin 1: Swiper.js — featured products and events slideshow -->
+    <section class="section section--alt featured" aria-labelledby="featured-title">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <span class="section-eyebrow">This month at Bean Boutique</span>
+          <h2 id="featured-title">Featured beans, gear &amp; gatherings</h2>
+          <p>A quick look at what our regulars are loving right now.</p>
+        </header>
+
+        <div class="swiper featured-swiper" aria-label="Featured products and events slideshow">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <article class="feature-slide">
+                <img src="images/coffee/beans-arabica.jpg" alt="Close-up of freshly roasted Arabica coffee beans" width="900" height="600">
+                <div class="feature-slide-caption">
+                  <p class="feature-slide-tag">New arrival</p>
+                  <h3>Ethiopia Guji single origin</h3>
+                  <p>Peach, jasmine and a silky finish — our brightest roast yet.</p>
+                  <a class="link-more" href="coffee.html">Shop the roast</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="feature-slide">
+                <img src="images/coffee/coffee-drink.jpg" alt="Cappuccino decorated with latte art on a café table" width="900" height="600">
+                <div class="feature-slide-caption">
+                  <p class="feature-slide-tag">Brew bar pick</p>
+                  <h3>Golden Hour Blend</h3>
+                  <p>Caramel and milk chocolate — good straight or with milk.</p>
+                  <a class="link-more" href="coffee.html">View coffee selection</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="feature-slide">
+                <img src="images/equipment/espresso-machine.jpg" alt="Espresso machine pouring two shots into cups" width="900" height="600">
+                <div class="feature-slide-caption">
+                  <p class="feature-slide-tag">Equipment</p>
+                  <h3>Home barista upgrades</h3>
+                  <p>Machines, grinders and kettles to level up your morning ritual.</p>
+                  <a class="link-more" href="equipment.html">Browse equipment</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="feature-slide">
+                <img src="images/events/event-cupping.jpg" alt="Coffee cupping session with rows of tasting bowls and spoons" width="900" height="600">
+                <div class="feature-slide-caption">
+                  <p class="feature-slide-tag">Event</p>
+                  <h3>Cupping: Origins Night</h3>
+                  <p>Taste five single origins side by side with our head roaster.</p>
+                  <a class="link-more" href="events.html">See all events</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="feature-slide">
+                <img src="images/offers/offers-banner.jpg" alt="Latte with heart-shaped latte art seen from above" width="900" height="600">
+                <div class="feature-slide-caption">
+                  <p class="feature-slide-tag">Subscriptions</p>
+                  <h3>Fresh beans, every month</h3>
+                  <p>From £11 a month — pause or cancel whenever you like.</p>
+                  <a class="link-more" href="offers.html">Compare plans</a>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <button class="swiper-button-prev" type="button" aria-label="Previous slide"></button>
+          <button class="swiper-button-next" type="button" aria-label="Next slide"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VISUAL SHOWCASE ===================== -->
+    <section class="section showcase" aria-labelledby="showcase-title">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Our world</span>
+          <h2 id="showcase-title">A little taste of Bean Boutique</h2>
+          <p>Beans, cups, kit and company — everything that makes our shop feel like home.</p>
+        </header>
+
+        <ul class="showcase-grid">
+          <li class="showcase-card">
+            <a href="coffee.html">
+              <img src="images/coffee/coffee-beans.jpg" alt="Roasted coffee beans spread across a wooden surface" width="600" height="750" loading="lazy">
+              <span class="showcase-caption">
+                <span class="showcase-title">Coffee beans</span>
+                <span class="showcase-hint">Single origins &amp; house blends</span>
+              </span>
+            </a>
+          </li>
+          <li class="showcase-card">
+            <a href="coffee.html">
+              <img src="images/coffee/coffee-drink.jpg" alt="Cappuccino with latte art served in a white cup" width="600" height="750" loading="lazy">
+              <span class="showcase-caption">
+                <span class="showcase-title">Coffee drinks</span>
+                <span class="showcase-hint">Espresso, flat white, filter</span>
+              </span>
+            </a>
+          </li>
+          <li class="showcase-card">
+            <a href="equipment.html">
+              <img src="images/equipment/gooseneck-kettle.jpg" alt="Pour-over brewing setup with a gooseneck kettle, dripper and carafe" width="600" height="750" loading="lazy">
+              <span class="showcase-caption">
+                <span class="showcase-title">Brewing equipment</span>
+                <span class="showcase-hint">From press to pour-over</span>
+              </span>
+            </a>
+          </li>
+          <li class="showcase-card">
+            <a href="events.html">
+              <img src="images/coffee/people-coffee.jpg" alt="Friends relaxing together over cups of coffee at a café table" width="600" height="750" loading="lazy">
+              <span class="showcase-caption">
+                <span class="showcase-title">People &amp; community</span>
+                <span class="showcase-hint">Workshops, cupping nights, chat</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== EXPLORE TEASERS ===================== -->
+    <section class="section section--alt explore" aria-labelledby="explore-title">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <span class="section-eyebrow">Where next</span>
+          <h2 id="explore-title">Explore the shop</h2>
+        </header>
+
+        <ul class="teaser-grid">
+          <li class="teaser-card">
+            <p class="teaser-tag">Catalogue</p>
+            <h3>Unique coffee blends</h3>
+            <p>Eight small-batch roasts with tasting notes and recommended brew methods.</p>
+            <a class="link-more" href="coffee.html">Browse coffee</a>
+          </li>
+          <li class="teaser-card">
+            <p class="teaser-tag">Workshops</p>
+            <h3>Events &amp; classes</h3>
+            <p>Latte art, cupping nights and beginner brewing — register in under a minute.</p>
+            <a class="link-more" href="events.html">See events</a>
+          </li>
+          <li class="teaser-card">
+            <p class="teaser-tag">Save money</p>
+            <h3>Offers &amp; subscriptions</h3>
+            <p>Monthly bean deliveries from £11, plus seasonal promotions and bundle deals.</p>
+            <a class="link-more" href="offers.html">View offers</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <p class="brand-name">Bean Boutique</p>
+        <p>A small independent coffee shop and micro-roastery serving specialty beans, brewing kit and friendly workshops.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee.html">Coffee selection</a></li>
+          <li><a href="equipment.html">Brewing equipment</a></li>
+          <li><a href="offers.html">Offers &amp; subscriptions</a></li>
+          <li><a href="events.html">Events &amp; workshops</a></li>
+          <li><a href="cart.html">Shopping cart</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Visit us</h2>
+        <address>
+          12 Abbey Churchyard<br>
+          Bath, BA1 1LJ<br>
+          Mon–Sat: 7:30–18:00<br>
+          Sunday: 9:00–16:00
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Get 15% off</h2>
+        <p>Join the Bean Letter for early access to new roasts and workshops.</p>
+        <form class="newsletter-form js-newsletter" novalidate>
+          <label for="footer-email">Email address</label>
+          <div class="newsletter-row">
+            <input type="email" id="footer-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="footer-email-message">
+            <button class="btn btn-primary btn-small" type="submit">Sign up</button>
+          </div>
+          <p class="form-message" id="footer-email-message" role="status"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          <span>&copy; <span data-current-year>2026</span> Bean Boutique Coffee Shop — educational front-end prototype.</span>
+          <span>Photography: Wikimedia Commons contributors (CC / public domain) — see README for credits.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== FIRST-VISITOR WELCOME MODAL ============== -->
+  <div class="modal-backdrop" id="welcome-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="welcome-title" aria-describedby="welcome-desc">
+      <button class="modal-close" type="button" aria-label="Close welcome offer dialog">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+
+      <span class="modal-eyebrow">First-time visitor offer</span>
+      <h2 id="welcome-title">Welcome to Bean Boutique!</h2>
+      <p id="welcome-desc">Get 15% off your first purchase. Enter your email to receive your discount.</p>
+
+      <form id="welcome-form" novalidate>
+        <div class="form-field">
+          <label for="welcome-email">Email address</label>
+          <input type="email" id="welcome-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="welcome-email-error">
+          <p class="field-error" id="welcome-email-error" hidden></p>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Send my 15% discount</button>
+      </form>
+
+      <p class="form-message form-message--success" id="welcome-success" hidden role="status"></p>
+      <p class="modal-smallprint">By signing up you agree to receive one email per month. Unsubscribe any time.</p>
+    </div>
+  </div>
+
+  <!-- Plugin 1: Swiper.js (local copy) -->
+  <script src="plugins/swiper/swiper-bundle.min.js"></script>
+  <!-- Site script (all custom JavaScript lives here) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+

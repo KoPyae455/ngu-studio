@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bean Boutique events and workshops — latte art classes, cupping nights and brewing workshops with easy registration.">
+  <meta name="theme-color" content="#241812">
+  <title>Events &amp; Workshops | Bean Boutique Coffee Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Plugin 3: Leaflet.js — interactive map of the shop and event venues -->
+  <link rel="stylesheet" href="plugins/leaflet/leaflet.css">
+</head>
+<body class="page-events">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34" focusable="false">
+            <circle cx="20" cy="20" r="19" fill="#c08552"></circle>
+            <ellipse cx="20" cy="20" rx="9" ry="14" fill="#f8f1e7" transform="rotate(-35 20 20)"></ellipse>
+            <path d="M13 27 C18 21, 22 19, 27 13" stroke="#5c3d2e" stroke-width="2.4" fill="none" stroke-linecap="round"></path>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Bean Boutique</span>
+          <span class="brand-tag">Coffee Shop</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee.html">Coffee</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li>
+            <a class="nav-cart" href="cart.html">
+              Cart <span class="cart-count" data-cart-count>0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ======================= PAGE HEADER ======================= -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <ol class="breadcrumb" aria-label="Breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li>Events &amp; workshops</li>
+        </ol>
+        <span class="section-eyebrow">Learn with us</span>
+        <h1 id="page-title">Events &amp; Workshops</h1>
+        <p>Hands-on sessions for curious coffee lovers — from your first latte art heart to professional-style cupping tables.</p>
+      </div>
+    </section>
+
+    <!-- ======================= UPCOMING EVENTS ======================= -->
+    <section class="section" aria-labelledby="events-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">What's on</span>
+          <h2 id="events-heading">Upcoming events &amp; workshops</h2>
+          <p>Small groups, plenty of tasting and a warm seat at our tables. Choose an event and register below.</p>
+        </header>
+
+        <div class="event-grid">
+
+          <article class="event-card">
+            <img src="images/events/event-latte-art.jpg" alt="Barista pouring latte art into a coffee cup" width="900" height="600" loading="lazy">
+            <div class="event-card-body">
+              <h3>Latte Art Masterclass</h3>
+              <dl class="event-facts">
+                <div><dt>Date:</dt><dd>Saturday 18 April 2026</dd></div>
+                <div><dt>Time:</dt><dd>10:00 – 12:00</dd></div>
+                <div><dt>Location:</dt><dd>The Loft Studio, 12 Abbey Churchyard</dd></div>
+                <div><dt>Price:</dt><dd>£35 per person</dd></div>
+              </dl>
+              <p>Steam silky milk, pour hearts and tulips, and take home a Bean Boutique pitcher — beginners very welcome.</p>
+              <button type="button" class="btn btn-primary" data-register-event="Latte Art Masterclass — 18 April 2026">Register for this event</button>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <img src="images/events/event-cupping.jpg" alt="Coffee cupping table with tasting bowls and spoons" width="900" height="600" loading="lazy">
+            <div class="event-card-body">
+              <h3>Cupping: Origins Night</h3>
+              <dl class="event-facts">
+                <div><dt>Date:</dt><dd>Thursday 7 May 2026</dd></div>
+                <div><dt>Time:</dt><dd>18:30 – 20:30</dd></div>
+                <div><dt>Location:</dt><dd>The Tasting Room, 12 Abbey Churchyard</dd></div>
+                <div><dt>Price:</dt><dd>£25 per person</dd></div>
+              </dl>
+              <p>Taste five single origins side by side with our head roaster and learn to score body, acidity and sweetness.</p>
+              <button type="button" class="btn btn-primary" data-register-event="Cupping: Origins Night — 7 May 2026">Register for this event</button>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <img src="images/events/event-brew-workshop.jpg" alt="Person brewing coffee with a French press in a workshop" width="900" height="600" loading="lazy">
+            <div class="event-card-body">
+              <h3>Home Brewing Workshop</h3>
+              <dl class="event-facts">
+                <div><dt>Date:</dt><dd>Saturday 23 May 2026</dd></div>
+                <div><dt>Time:</dt><dd>11:00 – 13:00</dd></div>
+                <div><dt>Location:</dt><dd>The Brew Bar, 12 Abbey Churchyard</dd></div>
+                <div><dt>Price:</dt><dd>£30 per person</dd></div>
+              </dl>
+              <p>French press, pour-over and AeroPress compared in one session — leave with a recipe card for your kit at home.</p>
+              <button type="button" class="btn btn-primary" data-register-event="Home Brewing Workshop — 23 May 2026">Register for this event</button>
+            </div>
+          </article>
+
+          <article class="event-card">
+            <img src="images/events/event-tasting.jpg" alt="Guests tasting coffee together at a tasting session" width="900" height="600" loading="lazy">
+            <div class="event-card-body">
+              <h3>Beginner Barista Bootcamp</h3>
+              <dl class="event-facts">
+                <div><dt>Date:</dt><dd>Sunday 7 June 2026</dd></div>
+                <div><dt>Time:</dt><dd>09:30 – 13:00</dd></div>
+                <div><dt>Location:</dt><dd>Main Café, 12 Abbey Churchyard</dd></div>
+                <div><dt>Price:</dt><dd>£65 per person</dd></div>
+              </dl>
+              <p>Dial in shots, texture milk and pull your first café-quality flat white on our professional machine.</p>
+              <button type="button" class="btn btn-primary" data-register-event="Beginner Barista Bootcamp — 7 June 2026">Register for this event</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REGISTRATION FORM ===================== -->
+    <section class="section section--alt" id="registration" aria-labelledby="registration-title">
+      <div class="container">
+        <div class="registration-panel">
+
+          <div class="registration-info">
+            <span class="section-eyebrow">Save your seat</span>
+            <h2 id="registration-title">Register for an event</h2>
+            <p>Complete the form and your email application will open with the details pre-filled, ready to send to our events team. We reply within one working day.</p>
+            <ul class="registration-notes">
+              <li>All materials and tastings included</li>
+              <li>Small groups — maximum 10 places</li>
+              <li>Free cancellation up to 48 hours before</li>
+              <li>Questions? Email events@beanboutique.example</li>
+            </ul>
+          </div>
+
+          <!-- Prototype email submission: action uses mailto as a fallback,
+               JavaScript builds the same mailto link after validation. -->
+          <form id="registration-form" action="mailto:events@beanboutique.example" method="post" enctype="text/plain" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="reg-first-name">First name</label>
+                <input type="text" id="reg-first-name" name="firstName" autocomplete="given-name" required aria-describedby="reg-first-name-error">
+                <p class="field-error" id="reg-first-name-error" hidden></p>
+              </div>
+
+              <div class="form-field">
+                <label for="reg-last-name">Last name</label>
+                <input type="text" id="reg-last-name" name="lastName" autocomplete="family-name" required aria-describedby="reg-last-name-error">
+                <p class="field-error" id="reg-last-name-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="reg-email">Email address</label>
+              <input type="email" id="reg-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="reg-email-error">
+              <p class="field-error" id="reg-email-error" hidden></p>
+            </div>
+
+            <div class="form-field">
+              <label for="reg-event">Which event?</label>
+              <select id="reg-event" name="event" required aria-describedby="reg-event-error">
+                <option value="">Choose an event&hellip;</option>
+                <option value="Latte Art Masterclass — 18 April 2026">Latte Art Masterclass — 18 April 2026</option>
+                <option value="Cupping: Origins Night — 7 May 2026">Cupping: Origins Night — 7 May 2026</option>
+                <option value="Home Brewing Workshop — 23 May 2026">Home Brewing Workshop — 23 May 2026</option>
+                <option value="Beginner Barista Bootcamp — 7 June 2026">Beginner Barista Bootcamp — 7 June 2026</option>
+                <option value="General enquiry">General enquiry</option>
+              </select>
+              <p class="field-error" id="reg-event-error" hidden></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit registration</button>
+            <p class="form-hint">Fields marked by the browser as required must be completed. This prototype sends the registration through your email application — no data is stored on a server.</p>
+
+            <p class="form-message form-message--success" id="registration-success" role="status" hidden></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LOCATION MAP ==================== -->
+    <!-- Plugin 3: Leaflet.js interactive map with shop & venue markers -->
+    <section class="section" aria-labelledby="visit-title">
+      <div class="container">
+        <div class="map-layout">
+
+          <div class="map-info">
+            <span class="section-eyebrow">Find us</span>
+            <h2 id="visit-title">Where the workshops happen</h2>
+            <address>
+              Bean Boutique Coffee Shop<br>
+              12 Abbey Churchyard<br>
+              Bath, BA1 1LJ<br>
+              Mon–Sat: 7:30–18:00 · Sun: 9:00–16:00
+            </address>
+            <p>Two minutes from Bath Spa station. Event venues — The Loft Studio and The Tasting Room — are both inside the building, so look for the caramel-coloured door.</p>
+            <p><strong>Getting here:</strong> bus routes 1, 5 and 6 stop on Dorchester Street; secure cycle racks are on the churchyard side.</p>
+          </div>
+
+          <div class="map-frame">
+            <div id="shop-map" role="region" aria-label="Interactive map showing Bean Boutique Coffee Shop and nearby event venues in Bath">
+              <p>Map of Bean Boutique Coffee Shop, 12 Abbey Churchyard, Bath (latitude 51.3811, longitude -2.3590). Enable JavaScript to view the interactive map.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <p class="brand-name">Bean Boutique</p>
+        <p>A small independent coffee shop and micro-roastery serving specialty beans, brewing kit and friendly workshops.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee.html">Coffee selection</a></li>
+          <li><a href="equipment.html">Brewing equipment</a></li>
+          <li><a href="offers.html">Offers &amp; subscriptions</a></li>
+          <li><a href="events.html">Events &amp; workshops</a></li>
+          <li><a href="cart.html">Shopping cart</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Visit us</h2>
+        <address>
+          12 Abbey Churchyard<br>
+          Bath, BA1 1LJ<br>
+          Mon–Sat: 7:30–18:00<br>
+          Sunday: 9:00–16:00
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Get 15% off</h2>
+        <p>Join the Bean Letter for early access to new roasts and workshops.</p>
+        <form class="newsletter-form js-newsletter" novalidate>
+          <label for="footer-email">Email address</label>
+          <div class="newsletter-row">
+            <input type="email" id="footer-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="footer-email-message">
+            <button class="btn btn-primary btn-small" type="submit">Sign up</button>
+          </div>
+          <p class="form-message" id="footer-email-message" role="status"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          <span>&copy; <span data-current-year>2026</span> Bean Boutique Coffee Shop — educational front-end prototype.</span>
+          <span>Photography: Wikimedia Commons contributors (CC / public domain) — see README for credits.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Plugin 3: Leaflet.js (local copy) -->
+  <script src="plugins/leaflet/leaflet.js"></script>
+  <!-- Site script (all custom JavaScript lives here) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+

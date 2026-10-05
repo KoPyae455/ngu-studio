@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your Bean Boutique shopping cart — review items, change quantities and try the prototype checkout.">
+  <meta name="theme-color" content="#241812">
+  <title>Shopping Cart | Bean Boutique Coffee Shop</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="page-cart">
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="34" height="34" focusable="false">
+            <circle cx="20" cy="20" r="19" fill="#c08552"></circle>
+            <ellipse cx="20" cy="20" rx="9" ry="14" fill="#f8f1e7" transform="rotate(-35 20 20)"></ellipse>
+            <path d="M13 27 C18 21, 22 19, 27 13" stroke="#5c3d2e" stroke-width="2.4" fill="none" stroke-linecap="round"></path>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Bean Boutique</span>
+          <span class="brand-tag">Coffee Shop</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee.html">Coffee</a></li>
+          <li><a href="equipment.html">Equipment</a></li>
+          <li><a href="offers.html">Offers</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li>
+            <a class="nav-cart" href="cart.html" aria-current="page">
+              Cart <span class="cart-count" data-cart-count>0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ======================= PAGE HEADER ======================= -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <ol class="breadcrumb" aria-label="Breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li>Shopping cart</li>
+        </ol>
+        <span class="section-eyebrow">Your basket</span>
+        <h1 id="page-title">Shopping Cart</h1>
+        <p>Your cart is saved in this browser, so it stays with you while you browse other pages — even after a refresh.</p>
+      </div>
+    </section>
+
+    <!-- ======================= CART CONTENT ======================= -->
+    <section class="section" aria-labelledby="cart-heading">
+      <div class="container">
+        <h2 id="cart-heading" class="visually-hidden">Cart contents</h2>
+
+        <!-- Status messages (update / remove / clear / checkout) -->
+        <div class="alert alert--info" id="cart-alert" role="status" hidden></div>
+
+        <div class="cart-layout">
+
+          <!-- Left: list of cart items (rendered by JavaScript) -->
+          <div>
+            <div class="cart-items" id="cart-items"></div>
+
+            <!-- Empty state, shown when the cart has no items -->
+            <div class="cart-empty" id="cart-empty" hidden>
+              <h2>Your cart is empty</h2>
+              <p>Fill it with fresh beans, brewing equipment or a monthly subscription.</p>
+              <a class="btn btn-primary" href="coffee.html">Continue shopping</a>
+            </div>
+          </div>
+
+          <!-- Right: order summary and prototype checkout -->
+          <aside class="cart-summary" id="cart-summary" aria-labelledby="summary-heading" hidden>
+            <h2 id="summary-heading">Order summary</h2>
+
+            <dl class="summary-list">
+              <div>
+                <dt>Subtotal</dt>
+                <dd id="cart-subtotal">£0.00</dd>
+              </div>
+              <div>
+                <dt>Delivery</dt>
+                <dd id="cart-delivery">£0.00</dd>
+              </div>
+              <div class="summary-total">
+                <dt>Total</dt>
+                <dd id="cart-total">£0.00</dd>
+              </div>
+            </dl>
+
+            <div class="cart-actions">
+              <button type="button" class="btn btn-primary btn-block" id="checkout-toggle" aria-expanded="false" aria-controls="checkout-form">Proceed to checkout</button>
+              <a class="btn btn-outline btn-block" href="coffee.html">Continue shopping</a>
+              <button type="button" class="btn btn-outline btn-block" id="clear-cart">Clear cart</button>
+            </div>
+
+            <p class="cart-note">Free UK delivery on orders over £40. This is a front-end prototype — no payment is processed.</p>
+
+            <!-- ===== Prototype checkout form ===== -->
+            <form id="checkout-form" novalidate hidden>
+              <h3>Checkout details</h3>
+
+              <div class="form-field">
+                <label for="checkout-name">Full name</label>
+                <input type="text" id="checkout-name" name="name" autocomplete="name" required aria-describedby="checkout-name-error">
+                <p class="field-error" id="checkout-name-error" hidden></p>
+              </div>
+
+              <div class="form-field">
+                <label for="checkout-email">Email address</label>
+                <input type="email" id="checkout-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="checkout-email-error">
+                <p class="field-error" id="checkout-email-error" hidden></p>
+              </div>
+
+              <div class="form-field">
+                <label for="checkout-address">Delivery address</label>
+                <textarea id="checkout-address" name="address" autocomplete="street-address" placeholder="12 Abbey Churchyard, Bath, BA1 1LJ" required aria-describedby="checkout-address-error"></textarea>
+                <p class="field-error" id="checkout-address-error" hidden></p>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Place prototype order</button>
+              <p class="checkout-note">Demonstration only: order details are checked and confirmed on screen. No card details are collected and no payment is taken.</p>
+            </form>
+
+            <!-- Confirmation message after checkout -->
+            <div class="success-box" id="checkout-success" role="status" hidden></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <p class="brand-name">Bean Boutique</p>
+        <p>A small independent coffee shop and micro-roastery serving specialty beans, brewing kit and friendly workshops.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="coffee.html">Coffee selection</a></li>
+          <li><a href="equipment.html">Brewing equipment</a></li>
+          <li><a href="offers.html">Offers &amp; subscriptions</a></li>
+          <li><a href="events.html">Events &amp; workshops</a></li>
+          <li><a href="cart.html">Shopping cart</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Visit us</h2>
+        <address>
+          12 Abbey Churchyard<br>
+          Bath, BA1 1LJ<br>
+          Mon–Sat: 7:30–18:00<br>
+          Sunday: 9:00–16:00
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Get 15% off</h2>
+        <p>Join the Bean Letter for early access to new roasts and workshops.</p>
+        <form class="newsletter-form js-newsletter" novalidate>
+          <label for="footer-email">Email address</label>
+          <div class="newsletter-row">
+            <input type="email" id="footer-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="footer-email-message">
+            <button class="btn btn-primary btn-small" type="submit">Sign up</button>
+          </div>
+          <p class="form-message" id="footer-email-message" role="status"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          <span>&copy; <span data-current-year>2026</span> Bean Boutique Coffee Shop — educational front-end prototype.</span>
+          <span>Photography: Wikimedia Commons contributors (CC / public domain) — see README for credits.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Site script (all custom JavaScript lives here) -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
