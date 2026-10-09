@@ -13,8 +13,6 @@
 
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Plugin 3: Leaflet.js — interactive map of the shop and event venues -->
-  <link rel="stylesheet" href="plugins/leaflet/leaflet.css">
 </head>
 <body class="page-events">
 
@@ -213,7 +211,6 @@
     </section>
 
     <!-- ==================== LOCATION MAP ==================== -->
-    <!-- Plugin 3: Leaflet.js interactive map with shop & venue markers -->
     <section class="section" aria-labelledby="visit-title">
       <div class="container">
         <div class="map-layout">
@@ -232,8 +229,17 @@
           </div>
 
           <div class="map-frame">
-            <div id="shop-map" role="region" aria-label="Interactive map showing Bean Boutique Coffee Shop and nearby event venues in Bath">
-              <p>Map of Bean Boutique Coffee Shop, 12 Abbey Churchyard, Bath (latitude 51.3811, longitude -2.3590). Enable JavaScript to view the interactive map.</p>
+            <div id="shop-map" role="region" aria-label="Google map showing the event location">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d238.70116794191594!2d96.12924066415019!3d16.8155037951196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smm!4v1791521537766!5m2!1sen!2smm"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Google map showing the event location">
+              </iframe>
             </div>
           </div>
 
@@ -297,12 +303,9 @@
     </div>
   </footer>
 
-  <!-- Plugin 3: Leaflet.js (local copy) -->
-  <script src="plugins/leaflet/leaflet.js"></script>
   <!-- Site script (all custom JavaScript lives here) -->
   <script src="js/script.js"></script>
 </body>
 </html>
-
 
 

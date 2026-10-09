@@ -11,12 +11,11 @@
    6.  Footer newsletter signup
    7.  PLUGIN 1 — Swiper.js slideshow (home page)
    8.  PLUGIN 2 — AOS animate-on-scroll (coffee page)
-   9.  PLUGIN 3 — Leaflet map (events page)
-   10. PLUGIN 4 — Fuse.js powered catalogue search (coffee page)
-   11. Cart page rendering, quantity, totals, checkout
-   12. Event registration validation (mailto submission)
-   13. Subscription calls-to-action (offers page)
-   14. Initialisation on page load
+   9. PLUGIN 3 — Fuse.js powered catalogue search (coffee page)
+   10. Cart page rendering, quantity, totals, checkout
+   11. Event registration validation (mailto submission)
+   12. Subscription calls-to-action (offers page)
+   13. Initialisation on page load
    ========================================================================== */
 
 "use strict";
@@ -421,57 +420,7 @@ function setCurrentYear() {
 }
 
 /* ------------------------------------------------------------------------
-   9. PLUGIN 3 — Leaflet interactive map (events page)
-   Shows the Bean Boutique shop plus event venues with markers & popups.
-   Change the coordinates below if you move the fictional shop.
-   ------------------------------------------------------------------------ */
-function initShopMap() {
-  if (typeof L === "undefined") return;
-  var mapElement = document.getElementById("shop-map");
-  if (!mapElement) return;
-
-  /* Remove the static fallback text before Leaflet draws the map */
-  mapElement.innerHTML = "";
-
-  var shopLocation = { lat: 51.3811, lng: -2.359 }; /* Bath city centre */
-
-  var map = L.map(mapElement).setView([shopLocation.lat, shopLocation.lng], 15);
-
-  /* OpenStreetMap tiles (requires an internet connection) */
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: "&copy; OpenStreetMap contributors"
-  }).addTo(map);
-
-  /* Marker 1: the coffee shop itself */
-  L.marker([shopLocation.lat, shopLocation.lng])
-    .addTo(map)
-    .bindPopup(
-      "<strong>Bean Boutique Coffee Shop</strong><br>12 Abbey Churchyard, Bath<br>Mon–Sat 7:30–18:00 · Sun 9:00–16:00"
-    )
-    .openPopup();
-
-  /* Markers 2 & 3: nearby event venues referenced on this page */
-  L.marker([51.3802, -2.3551])
-    .addTo(map)
-    .bindPopup("<strong>The Loft Studio</strong><br>Latte art &amp; brewing workshops");
-
-  L.marker([51.3825, -2.3621])
-    .addTo(map)
-    .bindPopup("<strong>The Tasting Room</strong><br>Cupping nights &amp; origin tastings");
-
-  /* A circle highlights the short walk between venues */
-  L.circle([51.3811, -2.359], {
-    radius: 220,
-    color: "#9c6234",
-    fillColor: "#c08552",
-    fillOpacity: 0.12,
-    weight: 2
-  }).addTo(map);
-}
-
-/* ------------------------------------------------------------------------
-   10. PLUGIN 4 — Fuse.js fuzzy search on the coffee catalogue
+   9. PLUGIN 3 — Fuse.js fuzzy search on the coffee catalogue
    Combined with category chips and an animated show/hide of the cards.
    ------------------------------------------------------------------------ */
 function initProductSearch() {
@@ -994,7 +943,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initWelcomeModal();
   initFeaturedSlideshow();
 
-  /* Coffee page — Plugin 2 (AOS) and Plugin 4 (Fuse.js) */
+  /* Coffee page — Plugin 2 (AOS) and Plugin 3 (Fuse.js) */
   initScrollAnimations();
   initProductSearch();
 
@@ -1003,9 +952,8 @@ document.addEventListener("DOMContentLoaded", function () {
   initCartControls();
   initCheckoutForm();
 
-  /* Events page — Plugin 3 (Leaflet) */
+  /* Events page */
   initRegistrationForm();
-  initShopMap();
 
   /* Offers page */
   initSubscriptionButtons();
@@ -1014,8 +962,6 @@ document.addEventListener("DOMContentLoaded", function () {
      errors — handy for testing and debugging in the browser console. */
   document.documentElement.setAttribute("data-js-ready", "true");
 });
-
-
 
 
 

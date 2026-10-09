@@ -33,4 +33,4 @@ All photographs in the `images/` folder were downloaded from **Wikimedia Commons
 * Images were resized (longest edge ≈ 900–1600 px) for web use; resizing does not change the licence terms.
 * CC BY and CC BY-SA licences require attribution — this table, together with the footer credit line, provides that attribution.
 * The icon SVGs (logo, value icons, search icon) were drawn by hand in the HTML and are original to this project.
-* OpenStreetMap map tiles used by Leaflet are © OpenStreetMap contributors (attribution shown on the map itself).
+* The event location map is embedded from Google Maps using the embed URL in `events.html`.

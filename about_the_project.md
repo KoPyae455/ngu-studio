@@ -39,7 +39,6 @@ bean-boutique/
 ├── plugins/            Local copies of the third-party libraries
 │   ├── swiper/         Swiper.js
 │   ├── aos/            AOS (Animate On Scroll)
-│   ├── leaflet/        Leaflet.js (+ marker images)
 │   └── fuse/           Fuse.js
 │
 ├── ATTRIBUTION.md      Image credits, authors and licences
@@ -60,7 +59,7 @@ npx serve bean-boutique
 
 or in VS Code, install the *Live Server* extension and click *Go Live*.
 
-**Internet connection:** the site works offline except for (a) Google Fonts, which fall back to system fonts, and (b) map tiles on `events.html`, which need an internet connection. All four plugins are stored locally in `plugins/`, so no CDN is required.
+**Internet connection:** the site works offline except for (a) Google Fonts, which fall back to system fonts, and (b) the embedded Google Map on `events.html`, which needs an internet connection. The three JavaScript plugins are stored locally in `plugins/`, so no CDN is required.
 
 ## Plugins / libraries used
 
@@ -68,10 +67,9 @@ or in VS Code, install the *Live Server* extension and click *Go Live*.
 |---|--------|---------|------------------|---------|
 | 1 | Swiper.js | 11.x | `index.html` (comment: *Plugin 1: Swiper.js*) | Featured products & events slideshow — autoplay, pagination dots, arrows, keyboard control |
 | 2 | AOS (Animate On Scroll) | 2.3.4 | `coffee.html` (comment: *Plugin 2: AOS*) | Animates the product cards as they scroll into view |
-| 3 | Leaflet.js | 1.9.4 | `events.html` (comment: *Plugin 3: Leaflet.js*) | Interactive OpenStreetMap with markers for the shop and event venues |
-| 4 | Fuse.js | 7.0.0 | `coffee.html` (comment: *Plugin 4: Fuse.js*) | Fuzzy search engine behind the live catalogue search box |
+| 3 | Fuse.js | 7.0.0 | `coffee.html` (comment: *Plugin 3: Fuse.js*) | Fuzzy search engine behind the live catalogue search box |
 
-Each plugin is clearly commented in the HTML and in `js/script.js` (sections 7–10). They are used as permitted external plugins; the core HTML/CSS structure is original.
+Each plugin is clearly commented in the HTML and in `js/script.js` (sections 7–9). They are used as permitted external plugins; the core HTML/CSS structure is original.
 
 
 ## Configuration values you may want to change
@@ -79,7 +77,7 @@ Each plugin is clearly commented in the HTML and in `js/script.js` (sections 7�
 | Value | Where to change it | Current setting |
 |-------|--------------------|-----------------|
 | Shop address & opening hours | Footer of every page + `events.html` (map info box) | 12 Abbey Churchyard, Bath, BA1 1LJ |
-| Map coordinates | `js/script.js` → `initShopMap()` → `shopLocation` | 51.3811, -2.3590 (Bath) |
+| Map embed | `events.html` → location map iframe | Google Maps embed for the event location |
 | Event registration email | `events.html` (`action="mailto:..."`) **and** `js/script.js` → `initRegistrationForm()` | events@beanboutique.example |
 | Delivery fee / free-delivery threshold | `js/script.js` → `DELIVERY_FEE`, `FREE_DELIVERY_OVER` | £3.95 / free over £40 |
 | Discount code in the welcome modal | `js/script.js` → `initWelcomeModal()` | WELCOME15 |
