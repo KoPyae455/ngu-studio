@@ -22,8 +22,6 @@
 
 /* ------------------------------------------------------------------------
    1. Storage helpers
-   Some browsers block localStorage (for example strict privacy settings),
-   so every access is wrapped in try/catch to avoid console errors.
    ------------------------------------------------------------------------ */
 var CART_KEY = "beanBoutiqueCart";
 var WELCOME_KEY = "beanBoutiqueWelcomeSeen";
@@ -148,8 +146,6 @@ function initMobileNavigation() {
 
 /* ------------------------------------------------------------------------
    4. Cart engine
-   Products add themselves with data attributes:
-   data-id, data-name, data-price, data-image
    ------------------------------------------------------------------------ */
 
 /** Add a product to the cart (merges quantities for the same id). */
@@ -793,8 +789,6 @@ function initCheckoutForm() {
 
 /* ------------------------------------------------------------------------
    12. Event registration (events page)
-   Prototype submission: the form builds a mailto: link so the registration
-   is sent through the visitor's email application.
    ------------------------------------------------------------------------ */
 function initRegistrationForm() {
   var form = document.getElementById("registration-form");
@@ -899,8 +893,6 @@ function initRegistrationForm() {
 
 /* ------------------------------------------------------------------------
    13. Subscription calls-to-action (offers page)
-   Clicking a plan button adds that subscription to the cart and shows a
-   confirmation message underneath the pricing card.
    ------------------------------------------------------------------------ */
 function initSubscriptionButtons() {
   document.querySelectorAll("[data-subscribe]").forEach(function (button) {

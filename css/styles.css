@@ -1,29 +1,5 @@
-/* ==========================================================================
-   Bean Boutique Coffee Shop — main stylesheet
-   NCC Education Level 4 Front End Web Development assignment
-   Original design built from scratch (no template).
-
-   Contents
-   1.  Design tokens
-   2.  Reset and base styles
-   3.  Utilities (layout, headings, accessibility helpers)
-   4.  Buttons
-   5.  Header and navigation (responsive)
-   6.  Footer
-   7.  Hero section (home page)
-   8.  Home page content sections (values, slideshow, showcase, teasers)
-   9.  First-visit welcome modal
-   10. Inner page headers
-   11. Coffee page: search, filters, product cards
-   12. Equipment page cards
-   13. Cart page
-   14. Events page (event cards, registration form, map)
-   15. Offers page (offer cards, pricing cards)
-   16. Forms (shared)
-   17. Alerts, toast messages
-   18. Responsive media queries
-   19. Motion preferences (accessibility)
-   ========================================================================== */
+/*    Bean Boutique Coffee Shop — main stylesheet
+   NCC Education Level 4 Front End Web Development assignment. */
 
 /* --------------------------------------------------------------------------
    1. Design tokens
