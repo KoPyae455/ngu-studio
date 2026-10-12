@@ -91,4 +91,4 @@ Each plugin is clearly commented in the HTML and in `js/script.js` (sections 7â€
 
 All photographs live locally in `images/` and come from Wikimedia Commons (public domain or Creative Commons licences). **[ATTRIBUTION.md](ATTRIBUTION.md)** lists every file with its source page, author and licence â€” keep that file with the project so attribution stays with the images.
 
-No website template, website builder or third-party HTML/CSS structure has been used. The HTML, CSS and JavaScript are an original implementation. The four open-source plugins listed above are included as permitted external libraries.
+No website template, website builder or third-party HTML/CSS structure has been used. The HTML, CSS and JavaScript are an original implementation. The three open-source libraries listed above are included as permitted external libraries.
